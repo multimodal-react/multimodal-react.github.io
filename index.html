@@ -247,8 +247,7 @@
       <img id="teaser" width="120%" src="images/teaser.png">
 
       <h2 class="subtitle has-text-centered">
-        MM-REACT allocates specialized vision experts with ChatGPT to solve challenging visual understanding tasks through multi-
-modal reasoning and action.
+        MM-REACT allocates specialized vision experts with ChatGPT to solve challenging visual understanding tasks through multimodal reasoning and action.
       </h2>
     </div>
   </div>
@@ -276,21 +275,12 @@ modal reasoning and action.
         <h2 class="title is-3">MM-ReAct Design</h2>
         <div class="content has-text-justified">
           <p>
-            <b>MM-ReAct is a system paradigm
-              that composes numerous vision experts with ChatGPT for
-              multimodal reasoning and action.</b>
+            <b>MM-ReAct is a system paradigm that composes numerous vision experts with ChatGPT for multimodal reasoning and action.</b>
           </p>
           <ul>
-            <li>To enable the image as
-              input, we simply use the file path as the input to ChatGPT.
-              The file path functions as a placeholder, allowing ChatGPT
-              to treat it as a black box. </li>
-            <li>Whenever a specific property, such
-              as celebrity names or box coordinates, is required, Chat-
-              GPT is expected to seek help from a specific vision expert
-              to identify the desired information. </li>
-            <li>The expert output is serialized as text and
-              combined with the input to further activate ChatGPT.</li>
+            <li>To enable the image as input, we simply use the file path as the input to ChatGPT. The file path functions as a placeholder, allowing ChatGPT to treat it as a black box. </li>
+            <li>Whenever a specific property, such as celebrity names or box coordinates, is required, ChatGPT is expected to seek help from a specific vision expert to identify the desired information. </li>
+            <li>The expert output is serialized as text and combined with the input to further activate ChatGPT.</li>
             <li>If no external experts are needed, we directly return the response to the user. </li>
           </ul>
         </div>        
@@ -313,15 +303,10 @@ modal reasoning and action.
             We provide an examples of MM-REACT’s full execution flow blow. More examples can be found in our paper.
           </p>
           <ul>
-            <li>The executions, highlighted by bold text, can be either a ChatGPT call (e.g.,
-              “<span style="color:#949494;"><b>ChatGPT:</b></span>”) or running a selected vision expert (e.g., “<span style="color:#949494;"><b>Image Captioning</b></span>”).</li>
+            <li>The executions, highlighted by bold text, can be either a ChatGPT call (<em>e.g.</em>, “<span style="color:#949494;"><b>ChatGPT:</b></span>”) or running a selected vision expert (em>e.g.</em>, “<span style="color:#949494;"><b>Image Captioning</b></span>”).</li>
             <li>ChatGPT executions can be used to generate <SPAN STYLE="background-color: #FFE699">thought</SPAN> (reasoning) and <SPAN STYLE="background-color: #DEEBF7">action</SPAN> texts that allocate vision experts <img src="./static/images/icon_reason.png" alt="MM-ReAct" width="20"/>, or produce the final response to users <img src="./static/images/icon.png" alt="MM-ReAct" width="20"/>.</li>
-            <li>Each ChatGPT execution takes the preceding text as input
-              and generates the text leading up to the next execution (e.g., “<span style="color:#949494;">This is an image. Assistant, what objects . . . image? &lt;ImagePath&gt;</span>” for
-              the first execution). </li>
-            <li>Texts in <span style="color:#949494;"><b>gray</b></span> represent MM-REACT’s <SPAN STYLE="background-color: #FFE699">thoughts</SPAN> or vision experts’ <SPAN STYLE="background-color: #DEEBF7">actions</SPAN> and outputs (<SPAN STYLE="background-color: #E2F0D9">observations</SPAN>), which are invisible to users. This
-              multimodal reasoning and action process occurs behind the scene to gather the necessary information for generating final responses to
-              users, which are shown in <b>black</b>.</li>
+            <li>Each ChatGPT execution takes the preceding text as input and generates the text leading up to the next execution (<em>e.g.</em>, “<span style="color:#949494;">This is an image. Assistant, what objects . . . image? &lt;ImagePath&gt;</span>” for the first execution). </li>
+            <li>Texts in <span style="color:#949494;"><b>gray</b></span> represent MM-REACT’s <SPAN STYLE="background-color: #FFE699">thoughts</SPAN> or vision experts’ <SPAN STYLE="background-color: #DEEBF7">actions</SPAN> and outputs (<SPAN STYLE="background-color: #E2F0D9">observations</SPAN>), which are invisible to users. This multimodal reasoning and action process occurs behind the scene to gather the necessary information for generating final responses to users, which are shown in <b>black</b>.</li>
           </ul>
         </div>        
         <img id="model" width="60%" src="images/figure_3.gif">
