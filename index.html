@@ -46,13 +46,12 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 10px;
-			width: 90%;
+			width: 60%;
 			margin: auto;
 		}
 		
 		/* Define the size of the GIFs */
 		.mygif {
-			/* width: 120%; */
 			height: auto;
 			cursor: pointer;
 		}
@@ -308,16 +307,21 @@ modal reasoning and action.
           <iframe src="https://user-images.githubusercontent.com/11957155/205432860-ef646e22-15fc-4527-8769-98df83381c09.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div> -->
+        <br>
+        <h3 class="subtitle has-text-centered">
+            Click each panel below for the corresponding video demo.
+        </h3>  
+        <br>
         <div class="column is-six-fifths mygrid" >
-          <img class="mygif" src="images/math.gif">
-          <img class="mygif" src="images/squirrel_gpt4.gif">
-          <img class="mygif" src="images/spatial.gif">
-          <img class="mygif" src="images/recipe.gif">
-          <img class="mygif" src="images/receipt.gif">
-          <img class="mygif" src="images/table.gif">
-          <img class="mygif" src="images/product.gif">
-          <img class="mygif" src="images/celebrity.gif">
-          <img class="mygif" src="images/mushroom.gif">
+          <img class="mygif" src="images/math.png">
+          <img class="mygif" src="images/squirrel_gpt4.png">
+          <img class="mygif" src="images/spatial.png">
+          <img class="mygif" src="images/recipe.png">
+          <img class="mygif" src="images/receipt.png">
+          <img class="mygif" src="images/table.png">
+          <img class="mygif" src="images/product.png">
+          <img class="mygif" src="images/celebrity.png">
+          <img class="mygif" src="images/mushroom.png">
         </div>
         
         <!-- <div id="myModal" class="modal">
@@ -408,7 +412,7 @@ modal reasoning and action.
 
       // display the GIF as a new image, will play from the begining
       var img = document.createElement("img");
-      img.src = this.src;
+      img.src = this.src.replace(".png", ".gif");
 
       // Add the img element to the overlay content and display the overlay
       document.getElementById("overlayContent").appendChild(img);
