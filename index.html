@@ -45,11 +45,15 @@
 		.mygrid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 10px;
-			width: 60%;
+			grid-gap: 20px;
+			width: 80%;
 			margin: auto;
 		}
-		
+		.grid_item {
+      background: #FFFFFF;
+      opacity: 1;
+    }
+
 		/* Define the size of the GIFs */
 		.mygif {
 			height: auto;
@@ -291,14 +295,47 @@ modal reasoning and action.
           </ul>
         </div>        
         <img id="model" width="100%" src="images/model_figure_2.gif">
-        <h3 class="subtitle has-text-centered">
+        <p class="has-text-centered">
           Flowchart of MM-REACT to enable image understanding with ChatGPT.
-        </h3>        
+        </p> 
+      </div>
+    </div>
+    <br>
+    <br>
+    <!-- Paper Model. -->
+    
+    <!-- Paper Model 2. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">MM-ReAct's Full Execution Flow</h2>
+        <div class="content has-text-justified">
+          <p>
+            We provide an examples of MM-REACT’s full execution flow blow. More examples can be found in our paper.
+          </p>
+          <ul>
+            <li>The executions, highlighted by bold text, can be either a ChatGPT call (e.g.,
+              “<span style="color:#949494;"><b>ChatGPT:</b></span>”) or running a selected vision expert (e.g., “<span style="color:#949494;"><b>Image Captioning</b></span>”).</li>
+            <li>ChatGPT executions can be used to generate <SPAN STYLE="background-color: #FFE699">thought</SPAN> (reasoning) and <SPAN STYLE="background-color: #DEEBF7">action</SPAN> texts that allocate vision experts <img src="./static/images/icon_reason.png" alt="MM-ReAct" width="20"/>, or produce the final response to users <img src="./static/images/icon.png" alt="MM-ReAct" width="20"/>.</li>
+            <li>Each ChatGPT execution takes the preceding text as input
+              and generates the text leading up to the next execution (e.g., “<span style="color:#949494;">This is an image. Assistant, what objects . . . image? &lt;ImagePath&gt;</span>” for
+              the first execution). </li>
+            <li>Texts in <span style="color:#949494;"><b>gray</b></span> represent MM-REACT’s <SPAN STYLE="background-color: #FFE699">thoughts</SPAN> or vision experts’ <SPAN STYLE="background-color: #DEEBF7">actions</SPAN> and outputs (<SPAN STYLE="background-color: #E2F0D9">observations</SPAN>), which are invisible to users. This
+              multimodal reasoning and action process occurs behind the scene to gather the necessary information for generating final responses to
+              users, which are shown in <b>black</b>.</li>
+          </ul>
+        </div>        
+        <img id="model" width="60%" src="images/figure_3.gif">
+        <p class="has-text-centered">
+          An example of MM-REACT’s full execution flow. 
+        </p>        
         </div>
       </div>
     </div>
     <br>
     <br>
+    <br>
+    <!-- Paper Model 2. -->
+
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
@@ -306,14 +343,23 @@ modal reasoning and action.
         <!-- <div class="publication-video">
           <iframe src="https://user-images.githubusercontent.com/11957155/205432860-ef646e22-15fc-4527-8769-98df83381c09.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->
+        </div> -->  
         <br>
         <h3 class="subtitle has-text-centered">
             Click each panel below for the corresponding video demo.
         </h3>  
         <br>
         <div class="column is-six-fifths mygrid" >
-          <img class="mygif" src="images/math.png">
+          <div class="grid_item"><img class="mygif" src="images/math.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/squirrel_gpt4.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/spatial.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/recipe.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/receipt.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/table.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/product.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/celebrity.png"></div>
+          <div class="grid_item"><img class="mygif" src="images/mushroom.png"></div>
+          <!-- <img class="mygif" src="images/math.png">
           <img class="mygif" src="images/squirrel_gpt4.png">
           <img class="mygif" src="images/spatial.png">
           <img class="mygif" src="images/recipe.png">
@@ -321,7 +367,7 @@ modal reasoning and action.
           <img class="mygif" src="images/table.png">
           <img class="mygif" src="images/product.png">
           <img class="mygif" src="images/celebrity.png">
-          <img class="mygif" src="images/mushroom.png">
+          <img class="mygif" src="images/mushroom.png"> -->
         </div>
         
         <!-- <div id="myModal" class="modal">
@@ -396,6 +442,13 @@ modal reasoning and action.
 
 
 <script>
+  $(".grid_item").hover(function () {
+    $(this).css("background", "#f2f1f1");
+    }, 
+    function () {
+        $(this).css("background", "#FFFFFF"); 
+    });
+
   // Get the modal element
   // var modal = document.getElementById("myModal");
   var overlay = document.getElementById("overlay");
